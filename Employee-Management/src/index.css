@@ -1,20 +1,36 @@
 @import "tailwindcss";
 
 html {
-	background: #020617;
-	color: #f8fafc;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  background: #020617;
+  color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-	min-height: 100vh;
-	margin: 0;
-	background:
-		radial-gradient(circle at top, rgba(59, 130, 246, 0.2), transparent 35%),
-		linear-gradient(180deg, #020617 0%, #0f172a 100%);
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at top left,  rgba(16, 185, 129, 0.12) 0%, transparent 45%),
+    radial-gradient(ellipse at bottom right, rgba(59, 130, 246, 0.08) 0%, transparent 45%),
+    linear-gradient(180deg, #020617 0%, #0f172a 100%);
 }
 
 #root {
-	min-height: 100vh;
+  min-height: 100vh;
+}
+
+/* scrollable lanes */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* subtle dot grid */
+.dot-grid {
+  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
